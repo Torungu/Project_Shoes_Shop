@@ -1,1 +1,165 @@
-/*# sourceMappingURL=index.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+@keyframes light-right {
+  0% {
+    right: -5%;
+    opacity: 0;
+  }
+  50% {
+    right: 50%;
+    opacity: 1;
+  }
+  100% {
+    right: 105%;
+    opacity: 0;
+  }
+}
+@keyframes light-left {
+  0% {
+    left: -5%;
+    opacity: 0;
+  }
+  50% {
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    left: 105%;
+    opacity: 0;
+  }
+}
+header {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1234;
+}
+header .container-fluid {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+header ul {
+  display: flex;
+  gap: 80px;
+  padding: 0;
+}
+header ul li a {
+  font-size: 14px;
+  font-weight: bold;
+}
+header ul i {
+  color: #000;
+  font-size: 20px;
+  font-weight: 900;
+}
+header .content-right ul {
+  gap: 130px;
+}
+header .content-center {
+  position: relative;
+}
+header .content-center::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 100%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.75);
+  right: -5%;
+  animation: light-right 3s infinite alternate linear;
+}
+header .content-center::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 100%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.75);
+  left: -5%;
+  animation: light-left 3s infinite alternate linear;
+}
+header .line {
+  display: inline-block;
+  background-color: black;
+  width: 1px;
+  height: 20px;
+  opacity: 0.2;
+}
+
+.header-space-height {
+  margin-top: 80px;
+}
+
+.scroll-event1 {
+  transition: transform 0.5s ease 0.1s;
+  pointer-events: none;
+  transform: translateY(-100%);
+}
+
+.scroll-event2 {
+  transition: transform 0.5s ease 0.1s;
+  pointer-events: none;
+  transform: translateY(0%);
+}
+
+.whathot .whathot-text .btn-hot {
+  padding: 5px 30px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 100px;
+}
+.whathot .whathot-content .row img {
+  width: 100%;
+}
+.whathot .whathot-content .col-lg-3 {
+  position: relative;
+}
+.whathot .whathot-content .content-img {
+  overflow: hidden;
+}
+.whathot .whathot-content .col-lg-3::before {
+  content: "AIR FORCE 1";
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 35px;
+  position: absolute;
+  width: 80%;
+  height: 30px;
+  bottom: 0;
+  left: 45px;
+  background-color: white;
+  z-index: 99;
+}
+.whathot .whathot-content .col-lg-3:hover::before {
+  background-color: black;
+  color: white;
+}
+.whathot .whathot-content .col-lg-3:hover img {
+  transform: scale(1.2);
+  transition: transform 0.3s linear;
+}
+.whathot .whathot-content .col-lg-3:not(:hover) img {
+  transform: scale(1);
+  transition: transform 0.3s linear;
+}/*# sourceMappingURL=index.css.map */

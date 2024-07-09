@@ -1,0 +1,29 @@
+@keyframes light-right{
+    0% {
+        right: -5%;
+        opacity: 0;
+    }
+    50% {
+        right: 50%;
+        opacity: 1;
+    }
+    
+    100% {
+        right: 105%;
+        opacity: 0;
+    }
+}
+@keyframes light-left{
+    0% {
+        left: -5%;
+        opacity: 0;
+    }
+    50% {
+        left: 50%;
+        opacity: 1;
+    }
+    100% {
+        left: 105%;
+        opacity: 0;
+    }
+}
