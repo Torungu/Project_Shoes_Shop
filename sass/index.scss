@@ -1,5 +1,10 @@
 @import "./base/reset";
 @import "./base/custom";
+@import "./component/media";
+@import "./component/animation";
+@import "./helpers/mixin";
+@import "./helpers/variable";
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./layouts/whathot_index";
+@import "./layouts/manunited_index"
