@@ -84,15 +84,15 @@ let renderRelatedShoe = (relatedShoe, idRelated) => {
                 alt="..."
               />
               <div class="card-body border-bottom border-dark-subtle">
-                <h3 class="card-title fs-5 fw-light">${name}</h3>
+                <h3 class="card-title fs-6 fw-light">${name}</h3>
                 <p class="card-text fw-bold text-uppercase fs-5">${alias}</p>
               </div>
               <div class="row row-cols-2 align-items-center">
                 <div class="col">
-                  <p class="my-0 text-uppercase fw-bold fs-4 border-end border-dark-subtle bg-light text-dark">price</p>
+                  <p class="my-0 text-uppercase fs-5 border-end border-dark-subtle bg-light text-dark">price</p>
                 </div>
                 <div class="col">
-                  <p class="my-0 fw-bold text-success fs-4">${price} $</p>
+                  <p class="my-0 text-success fs-5">${price} $</p>
                 </div>
               </div>
             </div>

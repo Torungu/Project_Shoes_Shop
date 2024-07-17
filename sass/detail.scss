@@ -1,4 +1,15 @@
+@import "./base/reset";
+@import "./base/custom";
+@import "./component/media";
+@import "./component/animation";
+@import "./helpers/mixin";
+@import "./helpers/variable";
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./layouts/whathot_index";
+@import "./layouts/manunited_index";
 .product_detail {
+  margin-top: 10%;
   .container {
     .row {
       .col {
@@ -38,6 +49,12 @@
             box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
               rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
             transition: all 0.5s;
+            .row {
+              p {
+                font-weight: bold;
+                transition: all 0.5s;
+              }
+            }
           }
           img {
             width: 100%;

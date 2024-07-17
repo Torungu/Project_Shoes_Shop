@@ -11,14 +11,14 @@ function getValueDangKy() {
     let input = field.querySelector("input");
 
     let { value, id } = input;
-    console.log("intput", input);
+    // console.log("intput", input);
     dangKyData[id] = value;
     dangKyData["gender"] = checkGender;
     let dataValidation = field.getAttribute("data-validation");
-    console.log(dataValidation);
+    // console.log(dataValidation);
 
     let theSpanThongBao = field.querySelector(".sp-thongbao");
-    console.log(theSpanThongBao);
+    // console.log(theSpanThongBao);
     // Validation
     let isEmpty = checkEmptyValue(value, theSpanThongBao);
     isValid &= isEmpty;
@@ -42,9 +42,9 @@ function getValueDangKy() {
 
 document.getElementById("dangKy").onsubmit = function (event) {
   event.preventDefault();
-  console.log("sk submit");
+  // console.log("sk submit");
   let dangKyData = getValueDangKy();
-  console.log(dangKyData);
+  // console.log(dangKyData);
   this.reset();
 };
 //===========
@@ -56,11 +56,12 @@ function dangkyAPI(dangKyData) {
     data: dangKyData,
   })
     .then((res) => {
-      console.log(res);
+      // console.log(res);
       hienThiThongBao("Đăng kí thành công", 3000, "bg-success");
+      document.getElementById("dangKy").reset();
     })
     .catch((err) => {
-      console.log(err);
+      // console.log(err);
       hienThiThongBao("Đăng kí thất bại", 3000, "bg-danger");
     });
 }
@@ -72,7 +73,7 @@ document.getElementById("dangKy").onsubmit = function (event) {
     dangkyAPI(dangKyData);
   }
 };
-console.log(dangkyAPI);
+// console.log(dangkyAPI);
 
 // =========
 
