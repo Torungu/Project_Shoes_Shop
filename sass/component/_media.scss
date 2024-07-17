@@ -1,0 +1,25 @@
+@media screen and (max-width: 1600px) {
+  header {
+    .header-content {
+      .content-left {
+        ul {
+          gap: 55px;
+        }
+      }
+      .content-right {
+        ul {
+          gap: 90px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .button-49,
+  .button-49:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+}

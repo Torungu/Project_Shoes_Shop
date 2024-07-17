@@ -1,0 +1,70 @@
+.whathot {
+    .whathot-text {
+        .btn-hot {
+            padding: 5px 30px;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            border-radius: 100px;
+        }
+    }
+
+    .whathot-content {
+        .col-lg-3 {
+            cursor: pointer;
+            img {
+                width: 100%;
+            }
+
+            position: relative;
+
+            .content-img {
+                overflow: hidden;
+            }
+
+            &::before {
+                content: "NIKE FORCE 1";
+                font-size: 14px;
+                font-weight: 500;
+                text-align: center;
+                line-height: 35px;
+                position: absolute;
+                width: 80%;
+                height: 30px;
+                bottom: 0px;
+                left: 45px;
+                background-color: white;
+                z-index: 99;
+            }
+
+            &:hover::before {
+                background-color: black;
+                color: white;
+            }
+
+            &:hover img {
+                transform: scale(1.2);
+                transition: transform .3s linear;
+            }
+
+            &:not(:hover) img {
+                transform: scale(1);
+                transition: transform .3s linear;
+            }
+        }
+    }
+}
+
+.line-bw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        margin: 100px 0;
+        width: 75%;
+        height: 2px;
+        background-color: #ccc;
+    }
+}
