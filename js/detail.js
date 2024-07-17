@@ -1,5 +1,6 @@
-const id = 3;
 let getDetailShoe = () => {
+  const urlParam = new URLSearchParams(window.location.search);
+  let id = urlParam.get("id");
   let promise = axios({
     method: "GET",
     url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
@@ -7,6 +8,7 @@ let getDetailShoe = () => {
   promise
     .then((res) => {
       renderDetailShoe(res.data.content, "renderDetail");
+      console.log(res.data.content);
     })
     .catch((err) => {
       console.log(err);
@@ -73,9 +75,9 @@ let renderDetailShoe = (detailShoe, idDetail) => {
 let renderRelatedShoe = (relatedShoe, idRelated) => {
   let content = "";
   for (let shoe of relatedShoe) {
-    let { image, name, alias, price } = shoe;
+    let { image, name, alias, price, id } = shoe;
     content += `<div class="col">
-            <div class="card text-center">
+            <div class="card text-center" onclick="window.location.href='../view/detail.html?id=${id}';">
               <img
                 src=${image}
                 class="card-img-top img-fluid border-bottom"
@@ -105,9 +107,4 @@ let sizeDetailShoe = (arr) => {
     content += `<input class="btn btn-light me-2" value=${size} readonly>`;
   }
   return content;
-};
-
-window.onload = function () {
-  const urlParam = new URLSearchParams(window.location.search);
-  console.log(urlParam);
 };
