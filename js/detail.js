@@ -1,0 +1,113 @@
+const id = 3;
+let getDetailShoe = () => {
+  let promise = axios({
+    method: "GET",
+    url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
+  });
+  promise
+    .then((res) => {
+      renderDetailShoe(res.data.content, "renderDetail");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+getDetailShoe();
+
+let renderDetailShoe = (detailShoe, idDetail) => {
+  let content = "";
+  let { name, alias, price, shortDescription, image, size, relatedProducts } =
+    detailShoe;
+  content = `
+          <div class="col">
+            <img src=${image} alt=""/>
+          </div>
+          <div class="col py-lg-0 py-5">
+            <h3 class="fs-5">${name}</h3>
+            <h2 class="fw-bold text-uppercase fs-2">${alias}</h2>
+            <p class="fw-bold text-success fs-3">${price} $</p>
+            <hr />
+            <p>Size:</p>
+            <div class="row row-cols-6">
+              ${sizeDetailShoe(size)}
+            </div>
+            <div class="product_number mt-4">
+              <div
+                class="row row-cols-2 align-items-center justify-content-around"
+              >
+                <div class="col-3">
+                  <div class="row row-cols-3 border border-dark">
+                    <button class="btn btn-decrease">-</button>
+                    <input
+                      type="number"
+                      value="1"
+                      class="border-0"
+                      readonly="readonly" id="quantity"
+                    />
+                    <button class="btn btn-increase">+</button>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <button class="btn btn-dark text-uppercase">buy now</button>-
+                </div>
+              </div>
+            </div>
+            <hr />
+            <p class="text-capitalize">${shortDescription}</p>
+          </div>`;
+  document.querySelector(`#${idDetail}`).innerHTML = content;
+  renderRelatedShoe(relatedProducts, "renderRelated");
+  let value = document.querySelector("#quantity").value * 1;
+  document.querySelector(".btn-increase").onclick = () => {
+    value++;
+    document.querySelector("#quantity").value = value;
+  };
+  document.querySelector(".btn-decrease").onclick = () => {
+    if (value > 1) {
+      value--;
+      document.querySelector("#quantity").value = value;
+    }
+  };
+};
+
+let renderRelatedShoe = (relatedShoe, idRelated) => {
+  let content = "";
+  for (let shoe of relatedShoe) {
+    let { image, name, alias, price } = shoe;
+    content += `<div class="col">
+            <div class="card text-center">
+              <img
+                src=${image}
+                class="card-img-top img-fluid border-bottom"
+                alt="..."
+              />
+              <div class="card-body border-bottom border-dark-subtle">
+                <h3 class="card-title fs-5 fw-light">${name}</h3>
+                <p class="card-text fw-bold text-uppercase fs-5">${alias}</p>
+              </div>
+              <div class="row row-cols-2 align-items-center">
+                <div class="col">
+                  <p class="my-0 text-uppercase fw-bold fs-4 border-end border-dark-subtle bg-light text-dark">price</p>
+                </div>
+                <div class="col">
+                  <p class="my-0 fw-bold text-success fs-4">${price} $</p>
+                </div>
+              </div>
+            </div>
+          </div>`;
+    document.querySelector(`#${idRelated}`).innerHTML = content;
+  }
+};
+
+let sizeDetailShoe = (arr) => {
+  let content = "";
+  for (let size of arr) {
+    content += `<input class="btn btn-light me-2" value=${size} readonly>`;
+  }
+  return content;
+};
+
+window.onload = function () {
+  const urlParam = new URLSearchParams(window.location.search);
+  console.log(urlParam);
+};

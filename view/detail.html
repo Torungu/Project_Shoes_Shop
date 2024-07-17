@@ -44,12 +44,25 @@
   </head>
 
   <body>
-    <header>
-      <!-- place navbar here -->
+    <header class="mb-5 text-center">
+      <h1>HEADER</h1>
     </header>
-    <main></main>
-    <footer>
-      <!-- place footer here -->
+    <section class="product_detail">
+      <div class="container">
+        <div
+          class="row row-cols-1 row-cols-lg-2 align-items-center g-2"
+          id="renderDetail"
+        ></div>
+      </div>
+    </section>
+    <section class="product_related mt-5">
+      <h2 class="text-center my-3">-Related Products-</h2>
+      <div class="container -3">
+        <div class="row row-cols-1 row-cols-lg-3 g-4" id="renderRelated"></div>
+      </div>
+    </section>
+    <footer class="mt-5 text-center">
+      <h1>FOOTER</h1>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script
@@ -63,5 +76,12 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"
+      integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="../js/detail.js"></script>
   </body>
 </html>
