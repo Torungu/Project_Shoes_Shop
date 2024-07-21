@@ -3,15 +3,15 @@
   position: relative;
   .button-49,
   .button-49:after {
-    width: 150px;
-    height: 50px;
+    width: 200px;
+    height: 70px;
     line-height: 50px;
-    font-size: 14px;
+    font-size: 25px;
     font-weight: 700;
     background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
     border: 0;
     color: #fff;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     box-shadow: 6px 0px 0px #00e6f6;
     outline: transparent;
     position: relative;
@@ -54,5 +54,8 @@
     position: absolute;
     left: 10%;
     bottom:10%;
+    h3{
+      font-size: 70px;
+    }
   }
 }

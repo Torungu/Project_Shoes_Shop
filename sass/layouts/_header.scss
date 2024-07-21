@@ -1,15 +1,13 @@
-
-header {
+header{
   background-color: #fff;
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
-  z-index: 1234;
+  z-index: 99999;
   .container-fluid {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
-
   ul {
     display: flex;
     gap: 80px;
@@ -17,7 +15,7 @@ header {
 
     li {
       a {
-        font-size: 14px;
+        font-size: 24px;
         font-weight: bold;
       }
     }
@@ -68,17 +66,12 @@ header {
     height: 20px;
     opacity: 0.2;
   }
+  .navbar{
+    display: none;
+    .navbar-nav{
+      font-size: 25px;
+      font-weight: bold;
+    }
+  }
 }
-.header-space-height {
-  margin-top: 80px;
-}
-.scroll-event1 {
-  transition: transform 0.5s ease 0.1s;
-  pointer-events: none;
-  transform: translateY(-100%);
-}
-.scroll-event2 {
-  transition: transform 0.5s ease 0.1s;
-  pointer-events: none;
-  transform: translateY(0%);
-}
+

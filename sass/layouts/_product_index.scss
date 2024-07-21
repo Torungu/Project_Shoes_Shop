@@ -1,0 +1,104 @@
+.product{
+.giay{
+    position: relative;
+    h3{
+        color: #9E3500;
+        font-weight: 500;
+        font-size: 45px;
+        text-transform: capitalize; 
+    }
+    .des{
+        font-weight: 500;
+        text-transform: capitalize;
+        font-size: 26px;
+        opacity: 0.4;
+    }
+    .button-50{
+        appearance: button;
+        background-color: #000;
+        background-image: none;
+        border: 1px solid #000;
+        box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 5px 10px 0;
+        overflow: visible;
+        padding: 12px 40px;
+        text-align: center;
+        text-transform: none;
+        touch-action: manipulation;
+        user-select: none;
+        -webkit-user-select: none;
+        vertical-align: middle;
+        white-space: nowrap;
+        &:focus{
+            text-decoration: none;
+        }
+        &:hover{
+            text-decoration: none;
+            color: #767677;
+            transition: all .3s;
+        }
+        &:active {
+            box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+            outline: 0;
+        }
+        &:not([disabled]):active{
+            box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+            transform: translate(2px, 2px);
+        }
+    }
+    .img-content{
+        background-color: #EAEEEF;
+    }
+    .overlay-p{
+        position: relative;
+    }
+    .overlay{
+        position: absolute;
+        bottom: -20px;
+        left: 10px;
+        padding: 3px 20px;
+        background-color: white;
+        font-size: 25px;
+    }
+    .btn-group{
+        i{
+            font-size: 30px;
+            max-height: 50px;
+            padding: 10px;
+            border: 1px solid black; 
+            &:hover{
+                color:red;
+                cursor: pointer;
+                transition: all .3s;
+            }
+        }
+    }
+    .carousel-indicators [data-bs-target]{
+        background-color: black;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    .carousel-indicators {
+        bottom : -70px;
+        gap:15px;
+    }
+    
+    .carousel-inner .carousel-item .row{
+        row-gap:100px !important;
+        column-gap:10px !important
+    }
+    .related-product{
+        position: absolute;
+        bottom:-200px;
+        left: 100px;
+    }
+}
+}
