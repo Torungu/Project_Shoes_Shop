@@ -5,3 +5,42 @@ a {
 ul{
   list-style: none;
 }
+
+.nike-font{
+  font-size: 65px;
+}
+.line-bw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+      margin: 100px 0;
+      width: 75%;
+      height: 2px;
+      background-color: #ccc;
+  }
+}
+.btn-hot {
+  padding: 5px 30px;
+  background-color: black;
+  color: white;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 100px;
+}
+
+.header-space-height {
+  margin-top: 80px;
+}
+.scroll-event1 {
+  transition: transform 0.5s ease 0.1s;
+  pointer-events: none;
+  transform: translateY(-100%);
+}
+.scroll-event2 {
+  transition: transform 0.5s ease 0.1s;
+  pointer-events: none;
+  transform: translateY(0%);
+}
+
