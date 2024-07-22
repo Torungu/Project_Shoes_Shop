@@ -94,47 +94,58 @@ ul {
 }
 @keyframes glitch {
   0% {
-    clip-path: var(--slice-1);
+    -webkit-clip-path: var(--slice-1);
+            clip-path: var(--slice-1);
     transform: translate(-20px, -10px);
   }
   10% {
-    clip-path: var(--slice-3);
+    -webkit-clip-path: var(--slice-3);
+            clip-path: var(--slice-3);
     transform: translate(10px, 10px);
   }
   20% {
-    clip-path: var(--slice-1);
+    -webkit-clip-path: var(--slice-1);
+            clip-path: var(--slice-1);
     transform: translate(-10px, 10px);
   }
   30% {
-    clip-path: var(--slice-3);
+    -webkit-clip-path: var(--slice-3);
+            clip-path: var(--slice-3);
     transform: translate(0px, 5px);
   }
   40% {
-    clip-path: var(--slice-2);
+    -webkit-clip-path: var(--slice-2);
+            clip-path: var(--slice-2);
     transform: translate(-5px, 0px);
   }
   50% {
-    clip-path: var(--slice-3);
+    -webkit-clip-path: var(--slice-3);
+            clip-path: var(--slice-3);
     transform: translate(5px, 0px);
   }
   60% {
-    clip-path: var(--slice-4);
+    -webkit-clip-path: var(--slice-4);
+            clip-path: var(--slice-4);
     transform: translate(5px, 10px);
   }
   70% {
-    clip-path: var(--slice-2);
+    -webkit-clip-path: var(--slice-2);
+            clip-path: var(--slice-2);
     transform: translate(-10px, 10px);
   }
   80% {
-    clip-path: var(--slice-5);
+    -webkit-clip-path: var(--slice-5);
+            clip-path: var(--slice-5);
     transform: translate(20px, -10px);
   }
   90% {
-    clip-path: var(--slice-1);
+    -webkit-clip-path: var(--slice-1);
+            clip-path: var(--slice-1);
     transform: translate(-10px, 0px);
   }
   100% {
-    clip-path: var(--slice-1);
+    -webkit-clip-path: var(--slice-1);
+            clip-path: var(--slice-1);
     transform: translate(0);
   }
 }
@@ -261,7 +272,8 @@ header .navbar .navbar-nav {
   box-shadow: 6px 0px 0px #00e6f6;
   outline: transparent;
   position: relative;
-  user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
@@ -281,7 +293,8 @@ header .navbar .navbar-nav {
   bottom: 0;
   background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
   text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
-  clip-path: var(--slice-0);
+  -webkit-clip-path: var(--slice-0);
+          clip-path: var(--slice-0);
 }
 .manunited .button-49:hover:after {
   animation: 1s glitch;
@@ -312,7 +325,9 @@ header .navbar .navbar-nav {
   opacity: 0.4;
 }
 .product .giay .button-50 {
-  appearance: button;
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
   background-color: #000;
   background-image: none;
   border: 1px solid #000;
@@ -330,7 +345,8 @@ header .navbar .navbar-nav {
   text-align: center;
   text-transform: none;
   touch-action: manipulation;
-  user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
@@ -388,7 +404,8 @@ header .navbar .navbar-nav {
 }
 .product .giay .carousel-inner .carousel-item .row {
   row-gap: 100px !important;
-  column-gap: 10px !important;
+  -moz-column-gap: 10px !important;
+       column-gap: 10px !important;
 }
 .product .giay .related-product {
   position: absolute;
