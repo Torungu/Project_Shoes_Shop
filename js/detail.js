@@ -98,7 +98,7 @@ let renderRelatedShoe = (relatedShoe, idRelated) => {
     //         </div>
     //       </div>`;
     content += `
-    <div class='col px-lg-3 px-5 mt-3 pt-4'>
+    <div class='col px-lg-3 px-5 mt-3 py-3'>
     <div class="img-content text-center overlay-p ">
       <img
         src=${image}
