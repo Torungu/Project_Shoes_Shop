@@ -107,5 +107,5 @@ function renderDuLieuGiay(arrGiay) {
 }
 
 function goLink(id) {
-  window.location.href = `http://127.0.0.1:5500/view/detail.html?id=${id}`;
+  window.location.href = `../view/detail.html?id=${id}`;
 }
