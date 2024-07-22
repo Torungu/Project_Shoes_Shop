@@ -21,7 +21,7 @@ let renderDetailShoe = (detailShoe, idDetail) => {
   let { name, alias, price, shortDescription, image, size, relatedProducts } =
     detailShoe;
   content = `
-          <div class="col">
+          <div class="col text-center">
             <img src=${image} alt="" class="w-lg-100 w-75"/>
           </div>
           <div class="col py-lg-0 py-5 px-lg-0 px-5">

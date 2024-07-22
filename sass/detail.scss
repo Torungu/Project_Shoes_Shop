@@ -13,11 +13,14 @@
   .container-fluid {
     .row {
       .col {
+        h2 {
+          color: #9e3500;
+        }
         img {
           width: 100%;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
             rgba(0, 0, 0, 0.23) 0px 3px 6px;
-          transform: translateX(22%);
+          // transform: translateX(-50%);
           transform: scale(0.8);
           background-color: #eaeeef;
         }
