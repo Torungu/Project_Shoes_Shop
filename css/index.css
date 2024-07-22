@@ -149,6 +149,72 @@ ul {
     transform: translate(0);
   }
 }
+@font-face {
+  font-family: Adidas;
+  src: url("../../font/AdihausDIN/adihausdin_cn.ttf");
+}
+@font-face {
+  font-family: Nike;
+  src: url("../../font/Nike-Futura.woff2");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Adidas, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.nike-font {
+  font-size: 65px;
+}
+
+.line-bw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line-bw p {
+  margin: 100px 0;
+  width: 75%;
+  height: 2px;
+  background-color: #ccc;
+}
+
+.btn-hot {
+  padding: 5px 30px;
+  background-color: black;
+  color: white;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 100px;
+}
+
+.header-space-height {
+  margin-top: 80px;
+}
+
+.scroll-event1 {
+  transition: transform 0.5s ease 0.1s;
+  pointer-events: none;
+  transform: translateY(-100%);
+}
+
+.scroll-event2 {
+  transition: transform 0.5s ease 0.1s;
+  pointer-events: none;
+  transform: translateY(0%);
+}
+
 header {
   background-color: #fff;
   position: fixed;
@@ -215,6 +281,99 @@ header .navbar {
 header .navbar .navbar-nav {
   font-size: 25px;
   font-weight: bold;
+}
+
+@font-face {
+  font-family: Adidas;
+  src: url("../../font/AdihausDIN/adihausdin_cn.ttf");
+}
+@font-face {
+  font-family: Nike;
+  src: url("../../font/Nike-Futura.woff2");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Adidas, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.nike-font {
+  font-size: 65px;
+}
+
+.line-bw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line-bw p {
+  margin: 100px 0;
+  width: 75%;
+  height: 2px;
+  background-color: #ccc;
+}
+
+.btn-hot {
+  padding: 5px 30px;
+  background-color: black;
+  color: white;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 100px;
+}
+
+.header-space-height {
+  margin-top: 80px;
+}
+
+.scroll-event1 {
+  transition: transform 0.5s ease 0.1s;
+  pointer-events: none;
+  transform: translateY(-100%);
+}
+
+.scroll-event2 {
+  transition: transform 0.5s ease 0.1s;
+  pointer-events: none;
+  transform: translateY(0%);
+}
+
+footer .container-fluid .row .col h3 {
+  font-size: 28px;
+}
+footer .container-fluid .row .col p {
+  font-size: 18px;
+}
+footer .container-fluid .row .col input.col-9 {
+  background-color: black;
+  border: none;
+  padding: 0;
+  margin-right: 18px;
+  border-bottom: 1px solid #eaeeef;
+  color: #eaeeef;
+  outline: none;
+}
+footer .container-fluid .row .col input::-moz-placeholder {
+  color: #eaeeef;
+}
+footer .container-fluid .row .col input::placeholder {
+  color: #eaeeef;
+}
+footer .container-fluid .row .col input.col-2 {
+  font-size: 16px;
+  font-weight: b;
+  padding: 2px 5px;
 }
 
 .whathot .whathot-content .col-lg-3 {

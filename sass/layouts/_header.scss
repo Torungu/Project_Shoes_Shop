@@ -1,4 +1,6 @@
-header{
+@import "../base/reset";
+@import "../base/custom";
+header {
   background-color: #fff;
   position: fixed;
   top: 0;
@@ -66,12 +68,11 @@ header{
     height: 20px;
     opacity: 0.2;
   }
-  .navbar{
+  .navbar {
     display: none;
-    .navbar-nav{
+    .navbar-nav {
       font-size: 25px;
       font-weight: bold;
     }
   }
 }
-

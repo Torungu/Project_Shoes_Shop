@@ -7,7 +7,6 @@
 @import "./helpers/variable";
 @import "./layouts/header";
 @import "./layouts/footer";
-
 * {
   // margin: 0;
   // padding: 0;
@@ -17,13 +16,21 @@
   list-style: none;
   // font-family: "Nunito", sans-serif;
 }
-body {
-  background: #dfdfdf;
+// body {
+//   background: #dfdfdf;
+//   background-image: url(../image/gb.png);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   height: 100vh;
+// }
+.form-register {
+  position: relative;
+  height: 100vh;
   background-image: url(../image/gb.png);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
-
 .wrapper {
   display: flex;
   max-width: 760px;
@@ -32,7 +39,6 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-
   transform: translate(-50%, -50%);
 
   .left,
@@ -64,7 +70,7 @@ body {
   .right {
     background: #fff;
     border-radius: 5px;
-
+    position: relative;
     .tabs {
       ul {
         text-align: center;
@@ -76,7 +82,7 @@ body {
           text-transform: uppercase;
           letter-spacing: 2px;
           cursor: pointer;
-
+          font-size: 20px;
           &.active {
             border-bottom: 2px solid #494f57;
           }
@@ -84,16 +90,21 @@ body {
       }
     }
 
-    .register,
-    .login {
-      margin-bottom: 25px;
+    // .register,
+    // .login {
+    //   margin-bottom: 25px;
+    // }
+    .btn-register {
+      position: absolute;
+      bottom: 10px;
+      width: 80%;
     }
     .input_field {
       .input {
         width: 100%;
         padding: 10px 15px;
         border: 0px;
-        font-size: 12px;
+        font-size: 16px;
         background: #ecebeb;
         border-radius: 5px;
       }
@@ -113,12 +124,14 @@ body {
     }
     .btn {
       background: #494f57;
-      padding: 10px;
+      padding: 5px;
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 3px;
       font-weight: bold;
       color: #ecebeb;
+      font-size: 13px;
+
       // translate: 0% -20%;
       // a {
       //   display: block;

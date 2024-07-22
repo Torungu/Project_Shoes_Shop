@@ -22,23 +22,23 @@ let renderDetailShoe = (detailShoe, idDetail) => {
     detailShoe;
   content = `
           <div class="col">
-            <img src=${image} alt=""/>
+            <img src=${image} alt="" class="w-lg-100 w-75"/>
           </div>
-          <div class="col py-lg-0 py-5">
+          <div class="col py-lg-0 py-5 px-lg-0 px-5">
             <h3 class="fs-5">${name}</h3>
             <h2 class="fw-bold text-uppercase fs-2">${alias}</h2>
             <p class="fw-bold text-success fs-3">${price} $</p>
             <hr />
             <p>Size:</p>
-            <div class="row row-cols-6">
+            <div class="row row-cols-6 ps-2">
               ${sizeDetailShoe(size)}
             </div>
-            <div class="product_number mt-4">
+            <div class="product_number mt-4 ">
               <div
-                class="row row-cols-2 align-items-center justify-content-around"
+                class="row row-cols-2 align-items-center justify-content-between ps-2"
               >
                 <div class="col-3">
-                  <div class="row row-cols-3 border border-dark">
+                  <div class="row row-cols-3 border border-dark ">
                     <button class="btn btn-decrease">-</button>
                     <input
                       type="number"
@@ -50,12 +50,12 @@ let renderDetailShoe = (detailShoe, idDetail) => {
                   </div>
                 </div>
                 <div class="col-8">
-                  <button class="btn btn-dark text-uppercase">buy now</button>-
+                  <button class="btn btn-dark text-uppercase">buy now</button>
                 </div>
               </div>
             </div>
             <hr />
-            <p class="text-capitalize">${shortDescription}</p>
+            <p class="text-capitalize fs-4">${shortDescription}</p>
           </div>`;
   document.querySelector(`#${idDetail}`).innerHTML = content;
   renderRelatedShoe(relatedProducts, "renderRelated");
@@ -75,28 +75,47 @@ let renderDetailShoe = (detailShoe, idDetail) => {
 let renderRelatedShoe = (relatedShoe, idRelated) => {
   let content = "";
   for (let shoe of relatedShoe) {
-    let { image, name, alias, price, id } = shoe;
-    content += `<div class="col">
-            <div class="card text-center" onclick="window.location.href='../view/detail.html?id=${id}';">
-              <img
-                src=${image}
-                class="card-img-top img-fluid border-bottom"
-                alt="..."
-              />
-              <div class="card-body border-bottom border-dark-subtle">
-                <h3 class="card-title fs-6 fw-light">${name}</h3>
-                <p class="card-text fw-bold text-uppercase fs-5">${alias}</p>
-              </div>
-              <div class="row row-cols-2 align-items-center">
-                <div class="col">
-                  <p class="my-0 text-uppercase fs-5 border-end border-dark-subtle bg-light text-dark">price</p>
-                </div>
-                <div class="col">
-                  <p class="my-0 text-success fs-5">${price} $</p>
-                </div>
-              </div>
-            </div>
-          </div>`;
+    let { image, name, alias, price, id, shortDescription } = shoe;
+    // content += `<div class="col">
+    //         <div class="card text-center" onclick="window.location.href='../view/detail.html?id=${id}';">
+    //           <img
+    //             src=${image}
+    //             class="card-img-top img-fluid border-bottom"
+    //             alt="..."
+    //           />
+    //           <div class="card-body border-bottom border-dark-subtle">
+    //             <h3 class="card-title fs-6 fw-light">${name}</h3>
+    //             <p class="card-text fw-bold text-uppercase fs-5">${alias}</p>
+    //           </div>
+    //           <div class="row row-cols-2 align-items-center">
+    //             <div class="col">
+    //               <p class="my-0 text-uppercase fs-5 border-end border-dark-subtle bg-light text-dark">price</p>
+    //             </div>
+    //             <div class="col">
+    //               <p class="my-0 text-success fs-5">${price} $</p>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </div>`;
+    content += `
+    <div class='col px-lg-3 px-5 mt-3 pt-4'>
+    <div class="img-content text-center overlay-p ">
+      <img
+        src=${image}
+        class="w-100"
+        alt=""
+      />
+      <p class="overlay">$${price}</p>
+    </div>
+    <h3 class="mt-3">${name}</h3>
+    <p class="des">
+          ${shortDescription}
+    </p>
+    <div class="btn-group d-flex justify-content-between">
+      <button class="button-50" onclick="window.location.href='../view/detail.html?id=${id}';">BUY NOW</button>
+    </div>
+  </div>
+  `;
     document.querySelector(`#${idRelated}`).innerHTML = content;
   }
 };

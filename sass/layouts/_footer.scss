@@ -1,0 +1,35 @@
+@import "../base/reset";
+@import "../base/custom";
+footer {
+  .container-fluid {
+    .row {
+      .col {
+        h3 {
+          font-size: 28px;
+        }
+        p {
+          font-size: 18px;
+        }
+        input {
+          &.col-9 {
+            background-color: black;
+            border: none;
+            padding: 0;
+            margin-right: 18px;
+            border-bottom: 1px solid #eaeeef;
+            color: #eaeeef;
+            outline: none;
+          }
+          &::placeholder {
+            color: #eaeeef;
+          }
+          &.col-2 {
+            font-size: 16px;
+            font-weight: b;
+            padding: 2px 5px;
+          }
+        }
+      }
+    }
+  }
+}

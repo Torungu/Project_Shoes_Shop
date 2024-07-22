@@ -1,8 +1,16 @@
+@font-face {
+  font-family: Adidas;
+  src: url("../../font/AdihausDIN/adihausdin_cn.ttf");
+}
+@font-face {
+  font-family: Nike;
+  src: url("../../font/Nike-Futura.woff2");
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: Adidas, sans-serif;
 }
 
 a {
@@ -12,6 +20,48 @@ a {
 
 ul {
   list-style: none;
+}
+
+.nike-font {
+  font-size: 65px;
+}
+
+.line-bw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line-bw p {
+  margin: 100px 0;
+  width: 75%;
+  height: 2px;
+  background-color: #ccc;
+}
+
+.btn-hot {
+  padding: 5px 30px;
+  background-color: black;
+  color: white;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 100px;
+}
+
+.header-space-height {
+  margin-top: 80px;
+}
+
+.scroll-event1 {
+  transition: transform 0.5s ease 0.1s;
+  pointer-events: none;
+  transform: translateY(-100%);
+}
+
+.scroll-event2 {
+  transition: transform 0.5s ease 0.1s;
+  pointer-events: none;
+  transform: translateY(0%);
 }
 
 @media screen and (max-width: 1600px) {
@@ -28,6 +78,39 @@ ul {
     width: 200px;
     height: 86px;
     line-height: 88px;
+  }
+}
+@media (min-width: 768px) {
+  .button-50 {
+    padding: 12px 50px;
+  }
+}
+@media (max-width: 992px) {
+  .banner {
+    margin-top: 120px;
+  }
+  .banner .banner-text {
+    display: none;
+  }
+  header .header-content {
+    display: none !important;
+  }
+  header .navbar {
+    display: block;
+  }
+  .nike-font {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1400px) {
+  header .header-content .content-left ul {
+    gap: 20px;
+  }
+  header .header-content .content-right ul {
+    gap: 40px;
+  }
+  .manunited .mu-content {
+    display: none;
   }
 }
 @keyframes light-right {
@@ -115,13 +198,79 @@ ul {
     transform: translate(0);
   }
 }
+@font-face {
+  font-family: Adidas;
+  src: url("../../font/AdihausDIN/adihausdin_cn.ttf");
+}
+@font-face {
+  font-family: Nike;
+  src: url("../../font/Nike-Futura.woff2");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Adidas, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.nike-font {
+  font-size: 65px;
+}
+
+.line-bw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line-bw p {
+  margin: 100px 0;
+  width: 75%;
+  height: 2px;
+  background-color: #ccc;
+}
+
+.btn-hot {
+  padding: 5px 30px;
+  background-color: black;
+  color: white;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 100px;
+}
+
+.header-space-height {
+  margin-top: 80px;
+}
+
+.scroll-event1 {
+  transition: transform 0.5s ease 0.1s;
+  pointer-events: none;
+  transform: translateY(-100%);
+}
+
+.scroll-event2 {
+  transition: transform 0.5s ease 0.1s;
+  pointer-events: none;
+  transform: translateY(0%);
+}
+
 header {
   background-color: #fff;
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
-  z-index: 1234;
+  z-index: 99999;
 }
 header .container-fluid {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -132,7 +281,7 @@ header ul {
   padding: 0;
 }
 header ul li a {
-  font-size: 14px;
+  font-size: 24px;
   font-weight: bold;
 }
 header ul i {
@@ -175,6 +324,63 @@ header .line {
   height: 20px;
   opacity: 0.2;
 }
+header .navbar {
+  display: none;
+}
+header .navbar .navbar-nav {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Adidas;
+  src: url("../../font/AdihausDIN/adihausdin_cn.ttf");
+}
+@font-face {
+  font-family: Nike;
+  src: url("../../font/Nike-Futura.woff2");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Adidas, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.nike-font {
+  font-size: 65px;
+}
+
+.line-bw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line-bw p {
+  margin: 100px 0;
+  width: 75%;
+  height: 2px;
+  background-color: #ccc;
+}
+
+.btn-hot {
+  padding: 5px 30px;
+  background-color: black;
+  color: white;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 100px;
+}
 
 .header-space-height {
   margin-top: 80px;
@@ -192,16 +398,45 @@ header .line {
   transform: translateY(0%);
 }
 
+footer .container-fluid .row .col h3 {
+  font-size: 28px;
+}
+footer .container-fluid .row .col p {
+  font-size: 18px;
+}
+footer .container-fluid .row .col input.col-9 {
+  background-color: black;
+  border: none;
+  padding: 0;
+  margin-right: 18px;
+  border-bottom: 1px solid #eaeeef;
+  color: #eaeeef;
+  outline: none;
+}
+footer .container-fluid .row .col input::-moz-placeholder {
+  color: #eaeeef;
+}
+footer .container-fluid .row .col input::placeholder {
+  color: #eaeeef;
+}
+footer .container-fluid .row .col input.col-2 {
+  font-size: 16px;
+  font-weight: b;
+  padding: 2px 5px;
+}
+
 * {
   outline: none;
   list-style: none;
 }
 
-body {
-  background: #dfdfdf;
+.form-register {
+  position: relative;
+  height: 100vh;
   background-image: url(../image/gb.png);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .wrapper {
@@ -239,6 +474,7 @@ body {
 .wrapper .right {
   background: #fff;
   border-radius: 5px;
+  position: relative;
 }
 .wrapper .right .tabs ul {
   text-align: center;
@@ -251,19 +487,21 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
+  font-size: 20px;
 }
 .wrapper .right .tabs ul li.active {
   border-bottom: 2px solid #494f57;
 }
-.wrapper .right .register,
-.wrapper .right .login {
-  margin-bottom: 25px;
+.wrapper .right .btn-register {
+  position: absolute;
+  bottom: 10px;
+  width: 80%;
 }
 .wrapper .right .input_field .input {
   width: 100%;
   padding: 10px 15px;
   border: 0px;
-  font-size: 12px;
+  font-size: 16px;
   background: #ecebeb;
   border-radius: 5px;
 }
@@ -282,10 +520,11 @@ body {
 }
 .wrapper .right .btn {
   background: #494f57;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: bold;
   color: #ecebeb;
+  font-size: 13px;
 }/*# sourceMappingURL=register.css.map */
