@@ -574,6 +574,9 @@ footer .container-fluid .row .col input.col-2 {
   .nike-font {
     font-size: 40px;
   }
+  .manunited .mu-content {
+    display: none;
+  }
 }
 @media (max-width: 1400px) {
   header .header-content .content-left ul {
@@ -581,8 +584,5 @@ footer .container-fluid .row .col input.col-2 {
   }
   header .header-content .content-right ul {
     gap: 40px;
-  }
-  .manunited .mu-content {
-    display: none;
   }
 }/*# sourceMappingURL=index.css.map */

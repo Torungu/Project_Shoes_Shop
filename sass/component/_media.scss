@@ -48,6 +48,11 @@
   .nike-font {
     font-size: 40px;
   }
+  .manunited{
+    .mu-content{
+      display: none;
+    }
+  }
 }
 @media(max-width: 1400px){
   header {
@@ -62,11 +67,6 @@
           gap: 40px;
         }
       }
-    }
-  }
-  .manunited{
-    .mu-content{
-      display: none;
     }
   }
 }
