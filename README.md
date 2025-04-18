@@ -18,7 +18,7 @@
 <br>
 
 ## ~ Collaborator & Stats:
-<img src="./image/Members_Stats.png" width="75%" align="right">
+
 <p>
   <p>Lê Trung Hưng<br><a href="https://github.com/letrunghungprovip123"><img src="https://avatars.githubusercontent.com/u/138652865?v=4" style="width:50px" alt="Image"/></a></p>
   <br>
